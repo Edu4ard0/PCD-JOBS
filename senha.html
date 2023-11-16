@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperação de Senha</title>
+    <link rel="stylesheet" href="senha.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+</head>
+<body>
+    <div class="page">
+        <form method="POST" class="formLogin">
+            <h1 id="texto" onmouseover="responsiveVoice.speak('recuperação de senha', 'Brazilian Portuguese Female')">Recuperação de Senha</h1>
+            <p id="texto" onmouseover="responsiveVoice.speak('Informe seu CPF ou CNPJ para receber as instruções de recuperação de senha.', 'Brazilian Portuguese Female')">Informe seu CPF ou CNPJ para receber as instruções de recuperação de senha.</p>
+            <label id="texto" onmouseover="responsiveVoice.speak('cpf ou cnpj', 'Brazilian Portuguese Female')"for="recoveryNumber">CPF ou CNPJ</label>
+            <input type="text" id="recoveryNumber" placeholder="Digite seu CPF ou CNPJ" />
+            <input id="texto" onmouseover="responsiveVoice.speak('enviar', 'Brazilian Portuguese Female')" type="submit" value="Enviar" class="btn enviar" />
+        </form>
+    </div>
+    <script src="senha.js"></script>
+    <script src="Login.js"></script>
+    <script type="text/javascript">
+		$('#falar').on('click', function(){
+			var texto = $("#leitor").val();
+			responsiveVoice.speak($("#leitor").val(), "Brazilian Portuguese Female");
+		});
+	</script>
+</body>
+</html>

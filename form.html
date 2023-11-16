@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="form.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+</head>
+<body>
+
+    <div class="page">
+        <form method="POST" class="formCadastro">
+            <h1 id="texto" onmouseover="responsiveVoice.speak('cadastro', 'Brazilian Portuguese Female')"class="text-dark text-decoration-none">Cadastro</h1>
+            <p id="texto" onmouseover="responsiveVoice.speak('Preencha suas Informações pessoais e experiência profissional', 'Brazilian Portuguese Female')">Preencha suas infomações pessoais e experiência profissional:</p>
+            
+            <!-- Dados Pessoais -->
+            <div class="section">
+                <h2 id="texto" onmouseover="responsiveVoice.speak('dados pessoais', 'Brazilian Portuguese Female')">Dados Pessoais</h2>
+                <label for= "nomeCompleto"id="texto" onmouseover="responsiveVoice.speak('digite seu CPF', 'Brazilian Portuguese Female')">CPF*</label>
+                <input type="text" id="CPF" placeholder="Digite seu CPF" required />
+
+                <label for="nomeCompleto"id="texto" onmouseover="responsiveVoice.speak('digite seu nome completo', 'Brazilian Portuguese Female')">Nome Completo*</label>
+                <input type="text" id="nomeCompleto" placeholder="Digite seu nome completo" required />
+
+                <label for="email"id="texto" onmouseover="responsiveVoice.speak('digite seu endereco de e-mail', 'Brazilian Portuguese Female')">Endereço de E-mail*</label>
+                <input type="email" id="email" placeholder="Digite seu endereço de e-mail" required />
+
+                <label for="telefone"id="texto" onmouseover="responsiveVoice.speak('digite seu número de telefone', 'Brazilian Portuguese Female')">Número de Telefone*</label>
+                <input type="tel" id="telefone" placeholder="Digite seu número de telefone" required />
+
+                <label for="endereco"id="texto" onmouseover="responsiveVoice.speak('digite seu endereço', 'Brazilian Portuguese Female')">Endereço*</label>
+                <input type="text" id="endereco" placeholder="Digite seu endereço" />
+            </div>
+
+            <!-- Objetivo (Opcional) -->
+            <div class="section">
+                <h2 id="texto" onmouseover="responsiveVoice.speak('objetivo', 'Brazilian Portuguese Female')">Objetivo (Opcional)</h2>
+                <textarea id="objetivo" rows="4"id="texto" onmouseover="responsiveVoice.speak('digite seu objetivo profissional', 'Brazilian Portuguese Female')" placeholder="Digite seu objetivo profissional"></textarea>
+            </div>
+
+            <!-- Perfil (Opcional) -->
+            <div class="section">
+                <h2 id="texto" onmouseover="responsiveVoice.speak('sobre Você', 'Brazilian Portuguese Female')">Sobre Você (Opcional)</h2>
+                <textarea id="resumo" rows="4"id="texto" onmouseover="responsiveVoice.speak('digite um resumo ou perfil profissional', 'Brazilian Portuguese Female')" placeholder="Digite um resumo ou perfil profissional"></textarea>
+            </div>
+
+            <!-- Deficiência (Opcional) -->
+            <div class="section">
+                <h2 id="texto" onmouseover="responsiveVoice.speak('deficiência', 'Brazilian Portuguese Female')">Deficiência</h2>
+                <label for="tipoDeficiencia"id="texto" onmouseover="responsiveVoice.speak('tipo de deficiência', 'Brazilian Portuguese Female')">Tipo de Deficiência*</label>
+                <select selected id="texto" onmouseover="responsiveVoice.speak('selecione o tipo de deficiência', 'Brazilian Portuguese Female')" id="tipoDeficiencia" required>
+                    <option value="" selected>Selecione o tipo de deficiência</option>
+                    <option value="Física">Física</option>
+                    <option value="Auditiva">Auditiva</option>
+                    <option value="Visual">Visual</option>
+                    <option value="Intelectual">Intelectual</option>
+                </select>
+
+                <label for="maisSobreDeficiencia"selected id="texto" onmouseover="responsiveVoice.speak('descreva sua deficiência', 'Brazilian Portuguese Female')">Descreva sua deficiência (Opcional)</label>
+                <textarea id="maisSobreDeficiencia" rows="4"selected id="texto" onmouseover="responsiveVoice.speak('fale mais sobre sua deficiência', 'Brazilian Portuguese Female')" placeholder="Fale mais sobre sua deficiência"></textarea>
+            </div>
+
+            <!-- Experiência Profissional -->
+            <div class="section">
+                <h2 selected id="texto" onmouseover="responsiveVoice.speak('experiência profissional', 'Brazilian Portuguese Female')">Experiência Profissional</h2>
+
+                <div class="experiencia">
+                    <label for="empresa1"selected id="texto" onmouseover="responsiveVoice.speak('nome da empresa', 'Brazilian Portuguese Female')">Nome da Empresa*</label>
+                    <input type="text" id="empresa1" selected id="texto" onmouseover="responsiveVoice.speak('nome da empresa', 'Brazilian Portuguese Female')" placeholder="Nome da empresa" required />
+
+                    <label for="localizacao1"selected id="texto" onmouseover="responsiveVoice.speak('Localização', 'Brazilian Portuguese Female')">Localização*</label>
+                    <input type="text" id="localizacao1" selected id="texto" onmouseover="responsiveVoice.speak('Localização da empresa', 'Brazilian Portuguese Female')"placeholder="Localização da empresa" required />
+
+                    <label for="peridoexp"selected id="texto" onmouseover="responsiveVoice.speak('Período de experiência', 'Brazilian Portuguese Female')">Período de Experiência*</label>
+                    <input type="text" id="periodoexp" selected id="texto" onmouseover="responsiveVoice.speak('tempo de trabalho na empresa', 'Brazilian Portuguese Female')" placeholder="Tempo de trabalho na empresa" required />
+
+                    <label for="cargo1"selected id="texto" onmouseover="responsiveVoice.speak('cargo', 'Brazilian Portuguese Female')">Cargo*</label>
+                    <input type="text" id="cargo1" selected id="texto" onmouseover="responsiveVoice.speak('seu cargo na empresa', 'Brazilian Portuguese Female')" placeholder="Seu cargo na empresa" required />
+
+                    <label for="responsabilidades1"selected id="texto" onmouseover="responsiveVoice.speak('responsabilidades e realizações', 'Brazilian Portuguese Female')">Responsabilidades e Realizações*</label>
+                    <textarea id="responsabilidades1" rows="4" selected id="texto" onmouseover="responsiveVoice.speak('descreva suas responsabilidades e realizações ', 'Brazilian Portuguese Female')" placeholder="Descreva suas responsabilidades e realizações" required></textarea>
+                </div>
+
+            </div>
+
+            <!-- Educação -->
+            <div class="section">
+                    <h2 selected id="texto" onmouseover="responsiveVoice.speak('Escolaridade', 'Brazilian Portuguese Female')">Escolaridade</h2>
+                <div class="educacao">
+                    <label for="grauObtido1"selected id="texto" onmouseover="responsiveVoice.speak('grau de Escolaridade', 'Brazilian Portuguese Female')">Grau de Escolaridade*</label>
+                    <input type="text" id="grauObtido1" selected id="texto" onmouseover="responsiveVoice.speak('Grau de Escolaridade', 'Brazilian Portuguese Female')" placeholder= "Grau de Escolaridade" required />
+
+                    <label for="instituicao1"selected id="texto" onmouseover="responsiveVoice.speak('instituição', 'Brazilian Portuguese Female')">Instituição*</label>
+                    <input type="text" id="instituicao1" selected id="texto" onmouseover="responsiveVoice.speak('Nome da instituição', 'Brazilian Portuguese Female')" placeholder="Nome da instituição" required />
+
+                    <label for="datainicio1"selected id="texto" onmouseover="responsiveVoice.speak('data de início', 'Brazilian Portuguese Female')">Data de Início*</label>
+                    <input type="text" id="dataConclusao1" selected id="texto" onmouseover="responsiveVoice.speak('data de início', 'Brazilian Portuguese Female')" placeholder="Data de Início" required />
+
+                    <label for="dataConclusao1"selected id="texto" onmouseover="responsiveVoice.speak('data de conclusão', 'Brazilian Portuguese Female')">Data de Conclusão*</label>
+                    <input type="text" id="dataConclusao1" selected id="texto" onmouseover="responsiveVoice.speak('data de conclusão', 'Brazilian Portuguese Female')" placeholder="Data de conclusão" required />
+
+                    <label for="areasEstudo1"selected id="texto" onmouseover="responsiveVoice.speak('áreas de estudo', 'Brazilian Portuguese Female')">Áreas de Estudo*</label>
+                    <input type="text" id="areasEstudo1" selected id="texto" onmouseover="responsiveVoice.speak('áreas de estudo relevantes', 'Brazilian Portuguese Female')"placeholder="Áreas de estudo relevantes" required />
+                </div>
+
+            </div>
+
+            <!-- Habilidades -->
+            <div class="section">
+                <h2 selected id="texto" onmouseover="responsiveVoice.speak('habilidades', 'Brazilian Portuguese Female')">Habilidades</h2>
+                <textarea id="habilidades" rows="4" selected id="texto" onmouseover="responsiveVoice.speak('destaque suas habilidades relevantes', 'Brazilian Portuguese Female')"placeholder="Destaque suas habilidades relevantes"></textarea>
+            </div>
+
+            <!-- Certificações e Treinamentos (Opcional) -->
+            <div class="section">
+                <h2 selected id="texto" onmouseover="responsiveVoice.speak('certificações e treinamentos', 'Brazilian Portuguese Female')">Certificações e Treinamentos (Opcional)</h2>
+                <textarea id="certificacoes" rows="4" selected id="texto" onmouseover="responsiveVoice.speak('Liste certificações e treinamentos relevantes', 'Brazilian Portuguese Female')" placeholder="Liste certificações e treinamentos relevantes"></textarea>
+            </div>
+
+            <!-- Idiomas (Opcional) -->
+            <div class="section">
+                <h2 id="texto" onmouseover="responsiveVoice.speak('idiomas', 'Brazilian Portuguese Female')">Idiomas (Opcional)</h2>
+                <!-- Adicione mais campos de idiomas conforme necessário -->
+                <div class="idiomas">
+                    <label for="idioma1"id="texto" onmouseover="responsiveVoice.speak('idioma', 'Brazilian Portuguese Female')">Idioma*</label>
+                    <select id="texto" onmouseover="responsiveVoice.speak('selecione um idioma', 'Brazilian Portuguese Female')" id="idioma1" required>
+                        <option value="" selected>Selecione um Idioma</option>
+                        <option value="Inglês">Inglês</option>
+                        <option value="Mandarim">Mandarim</option>
+                        <option value="Espanhol">Espanhol</option>
+                        <option value="Francês">Francês</option>
+                        <option value="Japonês">Japonês</option>
+                        <option value="Alemão">Alemão</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+            
+                    <label for="proficiencia1"id="texto" onmouseover="responsiveVoice.speak('nível no idioma', 'Brazilian Portuguese Female')">Nível no Idioma*</label>
+                    <select id="texto" onmouseover="responsiveVoice.speak('selecione o nível no idioma', 'Brazilian Portuguese Female')" id="proficiencia1" required>
+                        <option value="" selected>Selecione o Nível no Idioma</option>
+                        <option value="Básico"id="texto" onmouseover="responsiveVoice.speak('básico', 'Brazilian Portuguese Female')">Básico</option>
+                        <option value="Intermediário"id="texto" onmouseover="responsiveVoice.speak('Intermediário', 'Brazilian Portuguese Female')">Intermediário</option>
+                        <option value="Avançado"id="texto" onmouseover="responsiveVoice.speak('avançado', 'Brazilian Portuguese Female')">Avançado</option>
+                    </select>
+                </div>
+                <!-- Adicione mais campos de idiomas conforme necessário -->
+            </div>
+
+            <!-- Prêmios e Reconhecimentos (Opcional) -->
+            <div class="section">
+                <h2 id="texto" onmouseover="responsiveVoice.speak('prêmios e reconhecimentos', 'Brazilian Portuguese Female')">Prêmios e Reconhecimentos (Opcional)</h2>
+                <textarea id="premios" rows="4" id="texto" onmouseover="responsiveVoice.speak('liste prêmios e reconhecimentos profissinais', 'Brazilian Portuguese Female')" placeholder="Liste prêmios e reconhecimentos profissionais"></textarea>
+            </div>
+
+            <!-- Currículo (Opcional) -->
+            <div class="section">
+            <h2 id="texto" onmouseover="responsiveVoice.speak('currículo', 'Brazilian Portuguese Female')">Currículo</h2>
+            <label for="curriculo"id="texto" onmouseover="responsiveVoice.speak('Envie seu currículo (pdf ou Word)', 'Brazilian Portuguese Female')">Envie seu currículo (PDF ou Word)*</label>
+             <input type="file" id="curriculo" accept=".pdf, .doc, .docx" />
+            </div>
+
+            <!-- Botão de envio -->
+            <input id="texto" onmouseover="responsiveVoice.speak('cadastrar', 'Brazilian Portuguese Female')" type="submit" value="Cadastrar" class="btn cadastrar" />
+        </form>
+    </div>
+    <script type="text/javascript">
+		$('#falar').on('click', function(){
+			var texto = $("#leitor").val();
+			responsiveVoice.speak($("#leitor").val(), "Brazilian Portuguese Female");
+		});
+	</script>
+</body>
+</html>

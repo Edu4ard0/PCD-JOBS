@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="PCDJOBS.png" type="image/png"> <!-- Adicione esta linha para o ícone da aba -->
+    <link rel="stylesheet" href="Login.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="header-conteudo">
+                <a href="./index.html"><img src="./Cursos/img/PCDJOBS.png" alt="Logo do site - PCD Jobs" class="logo"></a>
+        
+            <nav>
+                <ul>
+                    <a id="texto" onmouseover="responsiveVoice.speak('Página inicial', 'Brazilian Portuguese Female')"href="../index.html"><li>Página inicial</li></a>
+                    <a id="texto" onmouseover="responsiveVoice.speak('vagas', 'Brazilian Portuguese Female')"href="../vagas.html"><li>Vagas</li></a>
+                    <a id="texto" onmouseover="responsiveVoice.speak('Empresas', 'Brazilian Portuguese Female')"><li>Empresas</li></a>
+                    
+                </ul>
+            </nav>
+            
+            <!-- <input type="search" placeholder=" 🔎  pesquisar por vagas" class="pesquisa"> -->
+
+            <!--<div class="nav-tools">
+                <a href="../Login.html" ><button class="button-login">Login</button></a>
+                <a href="../form.html"><button class="button-cadastro">Cadastre-se</button></a>
+            </div>-->
+        </div>
+    </header>
+
+    <div class="page">
+        <form method="POST" class="formLogin">
+            <div class="login-container">
+                <img src="PCDJOBS.jpg" alt="Imagem de login" class="login-image">
+                <h1>Login</h1>
+            </div>
+            <p id="texto" onmouseover="responsiveVoice.speak('digite seus dados de acesso nos campos abaixo.', 'Brazilian Portuguese Female')">Digite os seus dados de acesso nos campos abaixo.</p>
+            <label for="loginNumber"id="texto" onmouseover="responsiveVoice.speak('login, digite seu cpf ou CNPJ', 'Brazilian Portuguese Female')">Login</label>
+            <input type="text" id="loginNumber" placeholder="Digite seu CPF ou CNPJ" />
+            <label for="password"id="texto" onmouseover="responsiveVoice.speak('senha, digite sua senha no campo abaixo', 'Brazilian Portuguese Female')">Senha</label>
+            <input type="password" id="password" placeholder="Digite sua senha" />
+            <a href="senha.html" class="forgot-password"id="texto" onmouseover="responsiveVoice.speak('Esqueceu sua senha?', 'Brazilian Portuguese Female')">Esqueceu sua senha?</a>
+            <input id="texto" onmouseover="responsiveVoice.speak('acessar', 'Brazilian Portuguese Female')"type="submit" value="Acessar" class="btn acessar" />
+            <a href="form.html" class="register"id="texto" onmouseover="responsiveVoice.speak('novo no site? cadastre-se!', 'Brazilian Portuguese Female')">Novo no Site? Cadastre-se!</a>
+        </form>
+    </div>
+    <script src="Login.js"></script>
+    <script type="text/javascript">
+		$('#falar').on('click', function(){
+			var texto = $("#leitor").val();
+			responsiveVoice.speak($("#leitor").val(), "Brazilian Portuguese Female");
+		});
+	</script>
+</body>
+</html>
